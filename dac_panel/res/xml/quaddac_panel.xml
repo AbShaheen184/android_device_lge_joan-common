@@ -11,13 +11,20 @@
     <PreferenceCategory
         android:title="@string/quad_dac_settings" >
 
-        <!--<ListPreference
-            android:key="hifi_dop_dropdown"
+        <ListPreference
+            android:key="hifi_mode_dropdown"
             android:title="@string/hifi_mode"
             android:summary="%s"
             android:entries="@array/hifi_mode_entry_values"
-            android:entryValues="@array/hifi_mode_entry_values"
-            android:defaultValue="@string/hifi_mode_normal" />-->
+            android:entryValues="@array/hifi_mode_entry_values" />
+
+        <SeekBarPreference
+            android:key="avc_volume_seekbar"
+            android:title="@string/avc_volume"
+            android:summary="@string/avc_volume_summary"
+            asp:min="-24"
+            android:max="0"
+            android:defaultValue="-14" />
 
         <ListPreference
             android:key="sound_preset_dropdown"
@@ -32,29 +39,6 @@
             android:summary="%s"
             android:entries="@array/digital_filter_entry_values"
             android:entryValues="@array/digital_filter_entry_values" />
-
-        <ListPreference
-            android:key="hifi_mode_dropdown"
-            android:title="@string/hifi_mode"
-            android:summary="%s"
-            android:entries="@array/hifi_mode_entry_values"
-            android:entryValues="@array/hifi_mode_entry_values" />
-
-        <!--<SeekBarPreference
-            android:key="master_volume_seekbar"
-            android:title="@string/avc_volume"
-            android:summary=""
-            asp:min="-80"
-            android:max="0"
-            android:defaultValue="0" />-->
-
-        <SeekBarPreference
-            android:key="avc_volume_seekbar"
-            android:title="@string/avc_volume"
-            android:summary="@string/avc_volume_summary"
-            asp:min="-24"
-            android:max="0"
-            android:defaultValue="-14" />
 
     </PreferenceCategory>
 

@@ -20,7 +20,9 @@ $(call inherit-product-if-exists, vendor/lge/joan-common/joan-common-vendor.mk)
 COMMON_PATH := device/lge/joan-common
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay \
+    $(COMMON_PATH)/overlay-lineage
+
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
@@ -375,6 +377,10 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.1-service.joan
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.joan
 
 # Touchscreen
 PRODUCT_PACKAGES += \
